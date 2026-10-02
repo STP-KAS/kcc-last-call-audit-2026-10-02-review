@@ -1,0 +1,52 @@
+kaspanet/kccs main = 411b41bc14b3fda8f3a0548242c555f3597cad1a
+411b41bc14b3fda8f3a0548242c555f3597cad1a 2026-10-01T15:15:20+02:00 Romain Billot | docs: kcc0 is already final (#34)
+ad1b8996d648708c0ac6e351f950437c1b867c29 2026-10-01T14:52:20+02:00 Romain Billot | kcc-02: last call status (#33)
+815ecaff3071f5e227cc4b4cdb6c167ae2915666 2026-10-01T14:33:08+02:00 Romain Billot | kcc-01: last call status (#32)
+da834af024b235171cd154fdfde16c0cadf8854f 2026-09-28T12:07:34+02:00 Romain Billot | kcc-1: kcc0 compliance (#27)
+90beacd0dd34543a7321144d122189d779c5ad9b 2026-09-27T17:14:21+02:00 Romain Billot | kcc-2: kcc-0 compliant and use unkeyed hash function (#30)
+c0bb8f3babbb6a93dbddac900121e5046c1ec388 2026-09-21T15:31:53+02:00 Saefstroem | Change status from Last Call to Final (#25)
+54f4f9c2730f77ec5b1ee8bc746d7f94d83b8ee6 2026-09-02T14:06:54+03:00 Ori Newman | Add Comments-URI to KCC 1 document (#21)
+fd9ea1b84f158057dbcb031de36c8f5889e31b44 2026-09-02T14:06:18+03:00 Ori Newman | Add Comments-URI to KCC 2 document (#22)
+3229efbbcbc57e5b75df750d1cf045298d1df8a0 2026-08-28T11:35:42+03:00 Manyfestation | KCC-0020: prevent hash-chain borrow front-running (#18)
+93e1915fcfe813b878ebb1699b1eebc154c1a414 2026-08-27T20:55:39+03:00 Manyfestation | Clarify extended state fungibility semantics (#16)
+ba692c6129cdc99e4d6be2c76c583da1753ae79f 2026-08-27T19:52:38+02:00 Romain Billot | feat(kcc-01/dipatch-tag): hardening include record fields (#19)
+5cf757b63467b8c3fa4a290973d171063164be21 2026-08-27T16:09:58+02:00 Saefstroem | specify KCC-0 (#17)
+ea5176aa65b14b11be6ff4840ba0076893ada87e 2026-08-21T02:18:28+03:00 Michael Sutton | Move KCC20 borrowed receive guide into companion folder (#13)
+e31a5a855bdebd3bdc4456e5bd40179e9f98a3e8 2026-08-21T02:13:31+03:00 Manyfestation | KCC-0020 fungible token covenant specification (#2)
+502a8a292240c7f4b607f9b11e9931b24e727a23 2026-08-20T22:31:48+02:00 Romain Billot | KCC-0002: authority schemes for program ABIs (#5)
+5a17429a63ba67e7f689d68f501bfe38a950da08 2026-08-20T22:19:42+02:00 Romain Billot | KCC-0001: covenant definition, concepts, bytes layout and abi (#3)
+345aa32dbbb6addccf1a4cd12a22c213c99b3029 2026-07-15T14:32:02+02:00 Romain Billot | Merge pull request #1 from kaspanet/initial-kcc-readme
+0e10968ac36c8b4e6f2f95f254f73b364e26125f 2026-07-15T15:24:24+03:00 Michael Sutton | Initial kcc readme
+50f6bd694b944520de3c11f668270ac2ce644b71 2026-07-15T15:21:32+03:00 Michael Sutton | Initial commit
+
+== status lines over history: kcc-0000.md
+5cf757b Status: Last Call 
+c0bb8f3 Status: Final 
+== status lines over history: kcc-0001.md
+5a17429 Status: Draft 
+ba692c6 Status: Draft 
+54f4f9c Status: Draft 
+da834af Status: Draft 
+815ecaf Status: Last Call 
+== status lines over history: kcc-0002.md
+502a8a2 Status: Draft 
+fd9ea1b Status: Draft 
+90beacd Status: Draft 
+ad1b899 Status: Last Call 
+== status lines over history: kcc-0020.md
+e31a5a8 Status: Draft 
+ea5176a Status: Draft 
+93e1915 Status: Draft 
+3229efb Status: Draft 
+== status lines over history: README.md
+50f6bd6 
+0e10968 
+5a17429 | [1](kcc-0001.md) | Standard, Concepts, Covenant | Covenant definition, concepts, bytes layout and ABI | Romain Billot, Michael Sutton, Ori Newman | Draft | 
+502a8a2 | [1](kcc-0001.md) | Standard, Concepts, Covenant | Covenant definition, concepts, bytes layout and ABI | Romain Billot, Michael Sutton, Ori Newman | Draft | | [2](kcc-0002.md) | Program ABI Standard, Application | Authority Schemes | Romain Billot, Michael Sutton | Draft | 
+e31a5a8 | [1](kcc-0001.md) | Standard, Concepts, Covenant | Covenant definition, concepts, bytes layout and ABI | Romain Billot, Michael Sutton, Ori Newman | Draft | | [2](kcc-0002.md) | Program ABI Standard, Application | Authority Schemes | Romain Billot, Michael Sutton | Draft | 
+5cf757b | [0](kcc-0000.md) | Meta | KCC Purpose and Guidelines | Alexander Säfström | Draft | | [1](kcc-0001.md) | Standard, Concepts, Covenant | Covenant definition, concepts, bytes layout and ABI | Romain Billot, Michael Sutton, Ori Newman | Draft | | [2](kcc-0002.md) | Program ABI Standard, Application | Authority Schemes | Romain Billot, Michael Sutton | Draft | 
+90beacd | [0](kcc-0000.md) | Meta | KCC Purpose and Guidelines | Alexander Säfström | Draft | | [1](kcc-0001.md) | Standard, Concepts, Covenant | Covenant definition, concepts, bytes layout and ABI | Romain Billot, Michael Sutton, Ori Newman | Draft | | [2](kcc-0002.md) | Standards Track, ABI | Authority Schemes | Romain Billot, Michael Sutton | Draft | 
+da834af | [0](kcc-0000.md) | Meta | KCC Purpose and Guidelines | Alexander Säfström | Draft | | [1](kcc-0001.md) | Standards Track, Covenant | Covenant Concepts, Byte Layouts, and ABI | Romain Billot, Michael Sutton, Ori Newman | Draft | | [2](kcc-0002.md) | Standards Track, ABI | Authority Schemes | Romain Billot, Michael Sutton | Draft | 
+815ecaf | [0](kcc-0000.md) | Meta | KCC Purpose and Guidelines | Alexander Säfström | Draft | | [1](kcc-0001.md) | Standards Track, Covenant | Covenant Concepts, Byte Layouts, and ABI | Romain Billot, Michael Sutton, Ori Newman | Last Call | | [2](kcc-0002.md) | Standards Track, ABI | Authority Schemes | Romain Billot, Michael Sutton | Draft | 
+ad1b899 | [0](kcc-0000.md) | Meta | KCC Purpose and Guidelines | Alexander Säfström | Draft | | [1](kcc-0001.md) | Standards Track, Covenant | Covenant Concepts, Byte Layouts, and ABI | Romain Billot, Michael Sutton, Ori Newman | Last Call | | [2](kcc-0002.md) | Standards Track, ABI | Authority Schemes | Romain Billot, Michael Sutton | Last Call | 
+411b41b | [0](kcc-0000.md) | Meta | KCC Purpose and Guidelines | Alexander Säfström | Final | | [1](kcc-0001.md) | Standards Track, Covenant | Covenant Concepts, Byte Layouts, and ABI | Romain Billot, Michael Sutton, Ori Newman | Last Call | | [2](kcc-0002.md) | Standards Track, ABI | Authority Schemes | Romain Billot, Michael Sutton | Last Call | 

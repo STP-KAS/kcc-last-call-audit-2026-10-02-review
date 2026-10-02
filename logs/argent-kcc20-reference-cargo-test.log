@@ -1,0 +1,52 @@
+# argent-lang/kcc20-reference PR #1 head 5b2a23124ef43730eca4f69248bc2866daf2c24c
+# cargo +1.94.1 test --locked --all-targets -j 3 ; run 2026-10-02 on the STP-KAS review box (Linux x86_64)
+# total wall time incl. toolchain install and build: ~120 s
+     Running unittests src/bin/kcc20/main.rs (target/debug/deps/kcc20-ab31e504a306db51)
+test chain_borrow::tests::example_spends_successive_hash_chain_outputs ... ok
+test public_mint::tests::public_mint_accepts_caller_selected_guard ... ok
+test public_mint::tests::launch_mint_and_transfer_actual_outputs ... ok
+test public_mint::tests::mint_rejects_drained_principal_and_wrong_covenant ... ok
+test public_mint::tests::public_mint_rejects_exhaustion_invalid_allowances_and_owner_schemes ... ok
+test public_mint::tests::public_mint_accepts_full_partial_and_maximum_allotments ... ok
+test public_mint::tests::mint_rejects_missing_or_extra_outputs_and_multiple_minters ... ok
+test tests::continuation_rejects_an_uncommitted_program ... ok
+test tests::borrowed_receive_still_requires_delegate_authorization ... ok
+test tests::covenant_id_authority_may_be_a_distinct_family ... ok
+test tests::continuation_rejects_missing_or_foreign_covenant_binding ... ok
+test tests::delegate_cannot_authorize_continuation_outputs ... ok
+test tests::disabled_borrow_and_unexpected_threshold_witness_are_rejected ... ok
+test tests::hash_chain_accepts_successive_fresh_links ... ok
+test tests::hash_chain_borrow_rejects_bad_signatures_and_witness_lengths ... ok
+test tests::borrowed_receive_preserves_owner_policy_and_sompi ... ok
+test public_mint::tests::mint_binds_allowance_policy_and_recipient_state ... ok
+test tests::leader_and_borrowed_successor_use_covenant_positions ... ok
+test tests::normal_owner_can_replace_borrow_policy ... ok
+test public_mint::tests::public_mint_requires_configured_extension_commitment ... ok
+test tests::owner_authorization_rejects_wrong_keys_and_missing_authorities ... ok
+test tests::leader_and_delegator_entrypoints_reject_opposite_roles ... ok
+test tests::p2sh_authority_index_is_unsigned ... ok
+test tests::p2pkh_rejects_invalid_signatures_even_with_the_correct_public_key ... ok
+test tests::reference_preserves_kcc20_state_layout_and_dispatch_tags ... ok
+test tests::hash_chain_borrow_advances_guard_and_rejects_reused_links ... ok
+test tests::p2sh_authority_must_also_execute_successfully ... ok
+test tests::leader_and_delegate_accept_each_owner_scheme ... ok
+test public_mint::tests::public_mint_rejects_invalid_recipient_amounts_and_policies ... ok
+test tests::threshold_borrow_cannot_be_satisfied_at_maximum_threshold ... ok
+test tests::threshold_uses_only_the_first_eight_guard_bytes ... ok
+test tests::transfer_binds_declared_states_to_actual_outputs ... ok
+test tests::p2pkh_rejects_legacy_domain_hashes_for_both_roles ... ok
+test tests::transfer_rejects_a_declared_output_count_mismatch ... ok
+test tests::transfer_preserves_any_shared_extension_commitment ... ok
+test tests::signature_borrow_requires_the_guard_key_and_positive_increase ... ok
+test tests::transfer_rejects_amount_and_extension_mismatches ... ok
+test tests::transfer_rejects_invalid_output_policies ... ok
+test tests::transfer_rejects_malformed_leader_witnesses ... ok
+test tests::transfer_rejects_overflowing_totals ... ok
+test tests::owner_witnesses_require_exact_lengths_for_both_roles ... ok
+test tests::zero_and_maximum_token_amounts_are_spendable ... ok
+test tests::transfer_rejects_out_of_range_input_and_output_counts ... ok
+test tests::threshold_borrow_requires_a_strict_increase ... ok
+test tests::signature_schemes_accept_all_consensus_sighash_types ... ok
+test public_mint::tests::public_mint_accepts_each_owner_and_borrow_policy ... ok
+test tests::transfer_accepts_every_supported_input_output_shape ... ok
+test result: ok. 47 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.97s

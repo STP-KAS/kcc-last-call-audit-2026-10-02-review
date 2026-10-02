@@ -1,0 +1,35 @@
+#17 state=closed merged=true merged_by=IzioDev merged_at=2026-08-27T13:35:10Z author=saefstroem head=79834e7d3c3ce8997805612f254936a63e26f509 merge_commit=e67989ffdb4b567e9edbec1fb6962f0fa8603124 updated=2026-08-27T13:35:11Z title=Implement KCC-0
+#25 state=closed merged=true merged_by=IzioDev merged_at=2026-09-21T13:31:53Z author=saefstroem head=63d6924df279e2379924fb5df4249b0c8b7b2c91 merge_commit=c0bb8f3babbb6a93dbddac900121e5046c1ec388 updated=2026-09-21T13:35:16Z title=Change status from Last Call to Final for KCC0
+#27 state=closed merged=true merged_by=Manyfestation merged_at=2026-09-28T10:07:35Z author=IzioDev head=536472e9535a005c704bf5191f387e0cdebb8e37 merge_commit=da834af024b235171cd154fdfde16c0cadf8854f updated=2026-09-28T10:07:35Z title=kcc-1: kcc0 compliance
+#30 state=closed merged=true merged_by=saefstroem merged_at=2026-09-27T15:14:21Z author=IzioDev head=1c3ffd18e6492424293ebd356724fcbe11f48b57 merge_commit=90beacd0dd34543a7321144d122189d779c5ad9b updated=2026-09-27T15:14:22Z title=kcc-2: kcc-0 compliant and use unkeyed hash function
+#32 state=closed merged=true merged_by=michaelsutton merged_at=2026-10-01T12:33:08Z author=IzioDev head=04fdb577438c2b06365c8669a51aa3de45969c23 merge_commit=815ecaff3071f5e227cc4b4cdb6c167ae2915666 updated=2026-10-01T12:33:09Z title=kcc-01: last call status
+#33 state=closed merged=true merged_by=michaelsutton merged_at=2026-10-01T12:52:21Z author=IzioDev head=17004b4dd0e72af909479f7161b6907aa5f9ddb4 merge_commit=ad1b8996d648708c0ac6e351f950437c1b867c29 updated=2026-10-01T12:52:21Z title=kcc-02: last call status
+#34 state=closed merged=true merged_by=michaelsutton merged_at=2026-10-01T13:15:20Z author=IzioDev head=853bde5d6c43a16ca915cdfbe13b6f7f227f7be3 merge_commit=411b41bc14b3fda8f3a0548242c555f3597cad1a updated=2026-10-01T13:15:20Z title=docs: kcc0 is already final
+#31 state=open merged=false merged_by=null merged_at=null author=saefstroem head=cfb74cfa4d7e25f3e7ec0f9144ad72c460b9d810 merge_commit=null updated=2026-09-28T10:57:38Z title=KCC0 Compliance for KCC-20 + Last Call advancement
+#18 state=closed merged=true merged_by=saefstroem merged_at=2026-08-28T08:35:42Z author=Manyfestation head=bf3e188e9bba77e59469a1db1c84878caf3bab71 merge_commit=3229efbbcbc57e5b75df750d1cf045298d1df8a0 updated=2026-08-28T08:35:42Z title=KCC-0020: prevent hash-chain borrow front-running
+#2 state=closed merged=true merged_by=michaelsutton merged_at=2026-08-20T23:13:31Z author=Manyfestation head=a124b286d075060432aac1851de790d2d23c05f0 merge_commit=e31a5a855bdebd3bdc4456e5bd40179e9f98a3e8 updated=2026-08-20T23:13:31Z title=KCC-0020 fungible token covenant specification
+#20 state=closed merged=false merged_by=null merged_at=null author=ShawnPearce head=81f111f0910e30607f41178d597bbfb53a836c12 merge_commit=0b5d0e92956c93c09489a5d90cc3ff0f3e4bda60 updated=2026-09-27T19:42:42Z title=KCC-0020: first-cut conformance vectors
+#24 state=open merged=false merged_by=null merged_at=null author=saefstroem head=7159d487db2e2413b4ac245c4893a4ac0dd640f9 merge_commit=null updated=2026-09-23T19:42:14Z title=KCC12
+#26 state=open merged=false merged_by=null merged_at=null author=Manyfestation head=d51721ad0ac5fa43679d24dc77aeef4e48da8d0a merge_commit=53063b9bd880f7f5139742ebac6a52a6c26f94d8 updated=2026-09-30T07:52:43Z title=Add KCC-23: MJ (Metadata JSON)
+#29 state=open merged=false merged_by=null merged_at=null author=kaspahttp402 head=557428618eb8187cf63e9d27f4438ace8397f181 merge_commit=2df6480a8c6a13dc83c2d41aedf8c61a35de0fb3 updated=2026-09-21T21:57:43Z title=Reputation, bond, and identity registry covenant KCCs
+
+reviews #25:
+  IzioDev APPROVED 2026-09-12T11:03:28Z
+reviews #31:
+  Manyfestation COMMENTED 2026-09-22T12:29:07Z
+  STP-KAS COMMENTED 2026-09-22T14:11:01Z
+  saefstroem COMMENTED 2026-09-27T15:06:44Z
+  saefstroem COMMENTED 2026-09-27T15:07:36Z
+  saefstroem COMMENTED 2026-09-27T15:08:08Z
+  Manyfestation DISMISSED 2026-09-28T09:46:14Z
+  Manyfestation COMMENTED 2026-09-28T10:13:28Z
+  Manyfestation APPROVED 2026-09-28T10:57:38Z
+reviews #32:
+  michaelsutton APPROVED 2026-10-01T12:32:58Z
+reviews #33:
+  michaelsutton APPROVED 2026-10-01T12:52:12Z
+reviews #34:
+  michaelsutton APPROVED 2026-10-01T13:15:13Z
+
+#25 body:
+KCC0 was moved to `Last Call` on August 27. Today is `September 11` and 15 days have passed since then. As per `KCC0` after 14 days of `Last Call` status, the KCC standard is `Final`.

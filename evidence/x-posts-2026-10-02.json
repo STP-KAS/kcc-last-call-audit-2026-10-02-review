@@ -1,0 +1,11 @@
+{
+  "fetched": "2026-10-02 via X API get_posts_by_ids (read-only)",
+  "posts": [
+    {"id": "2105991195583488410", "author": "@kccforum (KCC Coordination Forum)", "created_at": "2026-10-02T12:00:03.000Z",
+     "text": "The KCC Coordination Forum has reached an important milestone in the standardization process. The foundational KCC-1 and KCC-2 standards have now entered Last Call.\n\nThis opens a final 14-day review period. If no major issues are identified, both standards will be finalized and considered ready for ecosystem adoption.\n\nWe encourage anyone working with these standards to review them carefully and raise any remaining concerns during this period."},
+    {"id": "2106008195114381508", "author": "@kccforum", "created_at": "2026-10-02T13:07:36.000Z", "replied_to": "2105999203637821486",
+     "text": "@KrexToken Transition of KCC-20 to Last Call is pending peer review of the KCC-20 reference implementation, which is the final milestone in the KCC process. This is expected in the coming days."},
+    {"id": "2106012029358047445", "author": "@manyfest_ (Manyfest)", "created_at": "2026-10-02T13:22:50.000Z", "quoted": "2105991195583488410",
+     "text": "KCC-20 is progressing together with KCC-1 and KCC-2, since it builds on top of them.\nIn addition, KCC-20 requires a published reference implementation before it can be finalized.\nThe Argent reference implementation is being audited and tested, and we are pushing to get it ready for Last Call as well."}
+  ]
+}

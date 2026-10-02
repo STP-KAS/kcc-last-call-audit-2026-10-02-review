@@ -1,0 +1,330 @@
+== KCC-1 JSON: hash_function
+PASS hash unkeyed-empty
+PASS hash unkeyed-kcc-1
+PASS key32 keyed-empty
+PASS hash keyed-empty
+== KCC-1 JSON: data_pushes
+PASS push_minimal empty
+PASS push_explicit empty
+PASS push_minimal op-1
+PASS push_explicit op-1
+PASS push_minimal op-16
+PASS push_explicit op-16
+PASS push_minimal op-1negate
+PASS push_explicit op-1negate
+PASS push_minimal one-byte-data
+PASS push_explicit one-byte-data
+PASS push_minimal op-data-75
+PASS push_explicit op-data-75
+PASS push_minimal op-pushdata1-76
+PASS push_explicit op-pushdata1-76
+PASS push_minimal op-pushdata1-255
+PASS push_explicit op-pushdata1-255
+PASS push_minimal op-pushdata2-256
+PASS push_explicit op-pushdata2-256
+PASS push_minimal op-pushdata2-65535
+PASS push_explicit op-pushdata2-65535
+PASS push_minimal op-pushdata4-65536
+PASS push_explicit op-pushdata4-65536
+PASS push_minimal one-byte-zero
+PASS push_explicit one-byte-zero
+PASS push_minimal one-byte-sign-bit
+PASS push_explicit one-byte-sign-bit
+== KCC-1 JSON: scalar_encodings
+PASS arg int 17
+PASS state int 17
+PASS arg int -5
+PASS state int -5
+PASS arg bool False
+PASS state bool False
+PASS arg bool True
+PASS state bool True
+PASS arg byte 01
+PASS state byte 01
+PASS arg string Kaspa
+PASS state string Kaspa
+PASS arg int 0
+PASS state int 0
+PASS arg int 1
+PASS state int 1
+PASS arg int -1
+PASS state int -1
+PASS arg int 16
+PASS state int 16
+PASS arg int 127
+PASS state int 127
+PASS arg int -127
+PASS state int -127
+PASS arg int 128
+PASS state int 128
+PASS arg int -128
+PASS state int -128
+PASS arg int 9223372036854775807
+PASS state int 9223372036854775807
+PASS arg int -9223372036854775807
+PASS state int -9223372036854775807
+PASS arg byte 00
+PASS state byte 00
+PASS arg byte 81
+PASS state byte 81
+== KCC-1 JSON: composite_encodings
+PASS fixed-bool-array payload
+PASS fixed-bool-array arg
+PASS dynamic-bool-array payload
+PASS dynamic-bool-array arg
+PASS record lowered
+PASS record combined
+PASS record-array groups
+PASS record-array combined
+PASS fixed-int-array payload
+PASS fixed-int-array arg
+PASS dynamic-int-array payload
+PASS dynamic-int-array arg
+PASS empty-byte-array arg
+PASS nested-record lowered
+PASS nested-record combined
+PASS dynamic-record-array groups
+PASS dynamic-record-array combined
+== KCC-1 JSON: dispatch
+PASS step signature hex
+PASS step tag
+PASS step argument encodings
+PASS tick signature hex
+PASS tick tag
+PASS tick tag push
+PASS record_dispatch dynamic-record-array names
+PASS record_dispatch dynamic-record-array sig hex
+PASS record_dispatch dynamic-record-array tag
+PASS record_dispatch renamed-record-and-fields names
+PASS record_dispatch renamed-record-and-fields sig hex
+PASS record_dispatch renamed-record-and-fields tag
+PASS record_dispatch reordered-record-fields names
+PASS record_dispatch reordered-record-fields sig hex
+PASS record_dispatch reordered-record-fields tag
+PASS record_dispatch fixed-record-array names
+PASS record_dispatch fixed-record-array sig hex
+PASS record_dispatch fixed-record-array tag
+PASS record_dispatch nested-record names
+PASS record_dispatch nested-record sig hex
+PASS record_dispatch nested-record tag
+PASS record_dispatch nested-record-array names
+PASS record_dispatch nested-record-array sig hex
+PASS record_dispatch nested-record-array tag
+== KCC-1 JSON: p2sh_envelope
+PASS blake2b(R)
+PASS spk script
+PASS signature_script (step args + tag + PushMinimal(R))
+== KCC-1 JSON vs prose: state_encoding (audit LC-6)
+PASS state field key
+PASS state field label
+PASS state field counter
+PASS state field enabled
+PASS JSON encoded_hex
+PASS JSON encoded_length
+PASS prose §6.8 hex == EncodeState(key,counter,enabled)
+PASS prose §6.8 stated length
+INFO LC-6: prose §6.8 = 44 bytes / 3 fields; JSON state_encoding = 50 bytes / 4 fields (adds string label). Same section, different vector.
+== KCC-1 JSON: template hashes / views / continuation / virtual element
+PASS template_hash empty|empty
+PASS   prose §6.9 contains e572dff8
+PASS template_hash 61|6263
+PASS   prose §6.9 contains 405e183e
+PASS template_hash 6162|63
+PASS   prose §6.9 contains a0968c01
+PASS template_hash 00ff|100080
+PASS   prose §6.9 contains 6616a667
+PASS view ['a', 'b'] cut
+PASS view ['a', 'b'] hash
+PASS   prose §6.10 contains 2e2c2813
+PASS view ['b', 'c'] cut
+PASS view ['b', 'c'] hash
+PASS   prose §6.10 contains 0eb10580
+PASS view ['b'] cut
+PASS view ['b'] hash
+PASS   prose §6.10 contains 7b96ebb8
+PASS continuation encoded_next_state
+PASS continuation R_next
+PASS continuation blake2b
+PASS continuation spk
+PASS virtual element packed
+PASS virtual element commitment
+== decoder positive controls (valid inputs must be ACCEPTED, else the reject checks mean nothing)
+PASS accept step arguments
+PASS accept composite fixed-bool-array
+PASS accept composite dynamic-bool-array
+PASS accept composite record
+PASS accept composite record-array
+PASS accept composite fixed-int-array
+PASS accept composite dynamic-int-array
+PASS accept composite empty-byte-array
+PASS accept composite nested-record
+PASS accept composite dynamic-record-array
+PASS accept scalar arg int 17
+PASS accept scalar arg int -5
+PASS accept scalar arg bool False
+PASS accept scalar arg bool True
+PASS accept scalar arg byte 01
+PASS accept scalar arg string Kaspa
+PASS accept scalar arg int 0
+PASS accept scalar arg int 1
+PASS accept scalar arg int -1
+PASS accept scalar arg int 16
+PASS accept scalar arg int 127
+PASS accept scalar arg int -127
+PASS accept scalar arg int 128
+PASS accept scalar arg int -128
+PASS accept scalar arg int 9223372036854775807
+PASS accept scalar arg int -9223372036854775807
+PASS accept scalar arg byte 00
+PASS accept scalar arg byte 81
+PASS accept JSON state_encoding
+PASS accept template_views state
+PASS accept argument type int[]
+PASS accept argument type CoffeeOrder[]
+PASS accept argument type Point[2]
+== KCC-1 JSON: rejection_vectors (decoder model in this script)
+PASS reject int-above-maximum (encode_scalar, rule 3.4.3)
+PASS reject int-below-minimum (encode_scalar, rule 3.4.3)
+PASS reject argument-int-redundant-sign-byte (decode_arguments, rule 3.4.3)
+PASS reject argument-int-negative-zero (decode_arguments, rule 3.4.3)
+PASS reject argument-int-nonminimal-push (decode_arguments, rule 3.4.2)
+PASS reject argument-byte-empty (decode_arguments, rule 3.4.4)
+PASS reject argument-bool-two (decode_arguments, rule 3.4.4)
+PASS reject argument-bool-explicit-false (decode_arguments, rule 3.4.4)
+PASS reject argument-fixed-bytes-short (decode_arguments, rule 3.4.4)
+PASS reject argument-int-array-partial-element (decode_arguments, rule 3.4.5)
+PASS reject argument-fixed-array-wrong-count (decode_arguments, rule 3.4.5)
+PASS reject argument-bool-array-invalid-element (decode_arguments, rule 3.4.4)
+PASS reject argument-record-array-unequal-groups (decode_arguments, rule 3.4.6)
+PASS reject argument-record-array-wrong-fixed-count (decode_arguments, rule 3.4.6)
+PASS reject state-bool-small-integer-opcode (decode_state, rule 3.7.1)
+PASS reject state-bool-nonminimal-length-prefix (decode_state, rule 3.7.1)
+PASS reject state-bool-empty-payload (decode_state, rule 3.7.1)
+PASS reject state-bool-invalid-payload (decode_state, rule 3.7.1)
+PASS reject state-int-minimal-width (decode_state, rule 3.7.1)
+PASS reject state-int-negative-zero (decode_state, rule 3.7.1)
+PASS reject state-missing-field (decode_state, rule 3.7.1)
+PASS reject state-trailing-bytes (decode_state, rule 3.7.1)
+PASS reject state-truncated-payload (decode_state, rule 3.7.1)
+PASS reject state-truncated-length (decode_state, rule 3.7.1)
+PASS reject state-non-push-opcode (decode_state, rule 3.7.1)
+PASS reject dynamic-array-zero-width-element (validate_argument_type, rule 3.4.5)
+PASS reject record-array-variable-width-leaf (validate_argument_type, rule 3.4.6)
+PASS reject record-array-zero-width-leaf (validate_argument_type, rule 3.4.6)
+PASS reject identical-structural-signatures signatures
+PASS reject identical-structural-signatures shared tag
+PASS reject identical-structural-signatures (validate_entrypoints, rule 3.5.1)
+PASS reject truncated-hash-collision signatures
+PASS reject truncated-hash-collision shared tag
+PASS reject truncated-hash-collision (validate_entrypoints, rule 3.5.1)
+== KCC-1 prose values present in markdown
+PASS kcc-0001.md contains af1349b9f5f9a1a6
+PASS kcc-0001.md contains 2c49ed65
+PASS kcc-0001.md contains 676b1a86
+PASS kcc-0001.md contains aa20ce5721628512
+PASS kcc-0001.md contains 0111040102030451
+PASS kcc-0001.md contains 964c61dd43eec7b7
+PASS kcc-0001.md contains 15e006c7c506fb20
+PASS kcc-0001.md contains 0500000000000080
+PASS kcc-0001.md contains 0185
+INFO JSON-only (not in kcc-0001.md): dispatch tag 161bd7ee present in markdown = False
+INFO JSON-only (not in kcc-0001.md): dispatch tag dafff68f present in markdown = False
+INFO JSON-only (not in kcc-0001.md): dispatch tag 81764c55 present in markdown = False
+INFO JSON-only (not in kcc-0001.md): dispatch tag 3d042cd2 present in markdown = False
+INFO JSON-only (not in kcc-0001.md): dispatch tag a625f54c present in markdown = False
+INFO JSON-only (not in kcc-0001.md): dispatch tag 33b057f4 present in markdown = False
+INFO JSON-only: 30 rejection_vectors; markdown §6 contains none of their ids = True
+== KCC-1 audit LC-7: int state payload vs sized ScriptNum
+PASS 8-byte sized ScriptNum(17) == signed-magnitude state payload
+PASS 8-byte sized ScriptNum(-5) == signed-magnitude state payload
+PASS 8-byte sized ScriptNum(-1) == signed-magnitude state payload
+PASS 8-byte sized ScriptNum(128) == signed-magnitude state payload
+PASS 8-byte sized ScriptNum(-128) == signed-magnitude state payload
+PASS 8-byte sized ScriptNum(9223372036854775807) == signed-magnitude state payload
+PASS 8-byte sized ScriptNum(-9223372036854775807) == signed-magnitude state payload
+== KCC-2 JSON: constructions
+PASS p2pk value == key
+PASS p2pk-schnorr argument_encoding
+PASS p2pk-schnorr state_encoding
+PASS p2pk-schnorr prose §4.1 shows authority_value
+PASS p2pkh-schnorr Hash(pk) unkeyed
+INFO p2pkh-schnorr keyed PublicKeyHash (pre-#30 rule) = 91438cfb14e4fbb78c740ab72162162f203eafae88940707d43ce7e97268d582 (differs, as expected)
+PASS p2pkh-schnorr argument_encoding
+PASS p2pkh-schnorr state_encoding
+PASS p2pkh-schnorr prose §4.1 shows authority_value
+PASS p2pkh-ecdsa Hash(pk) unkeyed
+INFO p2pkh-ecdsa keyed PublicKeyHash (pre-#30 rule) = 4ba1a5f9924f181d804cd6210a5492c3a539c4de0559657519ee5bd9502bef3f (differs, as expected)
+PASS p2pkh-ecdsa argument_encoding
+PASS p2pkh-ecdsa state_encoding
+PASS p2pkh-ecdsa prose §4.1 shows authority_value
+PASS p2sh blake2b
+PASS p2sh spk
+PASS p2sh argument_encoding
+PASS p2sh state_encoding
+PASS p2sh prose §4.1 shows authority_value
+PASS covenant id copied
+PASS covenant-id argument_encoding
+PASS covenant-id state_encoding
+PASS covenant-id prose §4.1 shows authority_value
+== KCC-2 JSON: approval_checks executed against a minimum-check model (signature is an oracle)
+PASS approval p2pk-valid
+PASS approval p2pk-invalid-signature
+PASS approval p2pk-wrong-key
+PASS approval schnorr-valid
+PASS approval schnorr-invalid-signature
+PASS approval schnorr-wrong-key
+PASS approval schnorr-wrong-length
+PASS approval ecdsa-valid
+PASS approval ecdsa-invalid-signature
+PASS approval ecdsa-wrong-key
+PASS approval ecdsa-wrong-length
+PASS approval p2sh-valid
+PASS approval p2sh-later-input
+PASS approval p2sh-wrong-version
+PASS approval p2sh-wrong-hash
+PASS approval p2sh-missing-input
+PASS approval covenant-self
+PASS approval covenant-other-input
+PASS approval covenant-wrong-id
+PASS approval covenant-output-only
+INFO approval_checks with signature_valid oracle: 11 of 20
+== KCC-2 JSON: registry_checks
+PASS registry 00
+PASS registry 01
+PASS registry 02
+PASS registry 03
+PASS registry 04
+PASS registry 05
+PASS registry 7f
+PASS registry 80
+PASS registry bf
+PASS registry ff
+== KCC-20 on main (no vectors on main; values derived here)
+INFO transfer({int,byte[32],byte,byte,byte[32],byte[32]}[],byte[]) -> 79c71c23 ; transfer_delegator(byte[]) -> fd3ef14a
+INFO same entrypoint if owner were typed `pubkey` (KCC-20 line 163 / KCC-2 0x00 row) -> 4bf4b1a6  (different tag)
+INFO kcc-0020.md prints 79c71c23 = False; prints fd3ef14a = False
+PASS unkeyed Hash(22^32) (audit LC-3 item 4 / #31 example)
+PASS unkeyed Hash(02||55^32) (#31 example)
+INFO keyed PublicKeyHash(22^32) = e101bdf13f880a00b3fe9e0179cad38951919e6facd2be0543c1314283ca6953 ; keyed PublicKeyHash(02||55^32) = db9c6e5ae98c6265c811dc4556d22b5585a8f259bd8a6fc35855b1bc248e4587
+== kaspanet/kccs#31 head cfb74cfa (UNMERGED) kcc-0020/vectors/conformance.json
+PASS #31 tag transfer
+PASS #31 tag transfer_delegator
+PASS #31 state fields
+PASS #31 state hex
+PASS #31 state length
+PASS #31 grouped pushes
+PASS #31 witness push
+PASS #31 owner witness length p2pk-schnorr/v1
+PASS #31 owner witness length p2pkh-schnorr/v1
+PASS #31 p2pkh-schnorr/v1 unkeyed Hash(pk)
+PASS #31 owner witness length p2pkh-ecdsa/v1
+PASS #31 p2pkh-ecdsa/v1 unkeyed Hash(pk)
+PASS #31 owner witness length p2sh/v1
+PASS #31 owner witness length covenant-id/v1
+PASS #31 hash chain x_1
+PASS #31 hash chain x_2
+PASS #31 hash chain x_3
+PASS #31 initial guard == x_3
+PASS #31 link-mismatch Hash(x_1||b3^32)
+
+SUMMARY PASS=296 FAIL=0 INFO=15
